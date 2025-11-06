@@ -1,0 +1,182 @@
+[
+  {
+    "title": "HR Manager",
+    "description": "Join our dynamic team and work on cutting-edge technology solutions.",
+    "positions": 3,
+    "department": "Cybersecurity"
+  },
+  {
+    "title": "HR Manager",
+    "description": "Join our dynamic team and work on cutting-edge technology solutions.",
+    "positions": 1,
+    "department": "Healthcare"
+  },
+  {
+    "title": "Sales Manager",
+    "description": "Join us in building the next generation of technology solutions.",
+    "positions": 2,
+    "department": "Education"
+  },
+  {
+    "title": "Operations Manager",
+    "description": "We are looking for a talented professional to join our team and contribute to innovative projects.",
+    "positions": 2,
+    "department": "Biology"
+  },
+  {
+    "title": "Operations Manager",
+    "description": "Exciting opportunity to work with a talented team on challenging projects.",
+    "positions": 4,
+    "department": "Architecture"
+  },
+  {
+    "title": "Lecturer",
+    "description": "We seek a motivated individual to help drive our mission forward.",
+    "positions": 4,
+    "department": "Chemistry"
+  },
+  {
+    "title": "Senior Software Engineer",
+    "description": "Opportunity to work on impactful projects with a collaborative team.",
+    "positions": 5,
+    "department": "Healthcare"
+  },
+  {
+    "title": "Graphic Designer",
+    "description": "Opportunity to work on impactful projects with a collaborative team.",
+    "positions": 2,
+    "department": "Quality Assurance"
+  },
+  {
+    "title": "Research Assistant",
+    "description": "Exciting opportunity to work with a talented team on challenging projects.",
+    "positions": 5,
+    "department": "Physics"
+  },
+  {
+    "title": "Network Engineer",
+    "description": "We're seeking a skilled professional to help shape our future.",
+    "positions": 2,
+    "department": "Operations"
+  },
+  {
+    "title": "Business Analyst",
+    "description": "Be part of an innovative team working on exciting challenges.",
+    "positions": 5,
+    "department": "Quality Assurance"
+  },
+  {
+    "title": "Lab Technician",
+    "description": "We're seeking a skilled professional to help shape our future.",
+    "positions": 4,
+    "department": "Biology"
+  },
+  {
+    "title": "Backend Developer",
+    "description": "Be part of an innovative team working on exciting challenges.",
+    "positions": 2,
+    "department": "Human Resources"
+  },
+  {
+    "title": "Software Engineer",
+    "description": "Looking for an experienced professional to lead and innovate.",
+    "positions": 2,
+    "department": "Quality Assurance"
+  },
+  {
+    "title": "QA Engineer",
+    "description": "Join our dynamic team and work on cutting-edge technology solutions.",
+    "positions": 4,
+    "department": "Finance"
+  },
+  {
+    "title": "Sales Manager",
+    "description": "We're seeking a skilled professional to help shape our future.",
+    "positions": 4,
+    "department": "Product Management"
+  },
+  {
+    "title": "Backend Developer",
+    "description": "We seek a motivated individual to help drive our mission forward.",
+    "positions": 5,
+    "department": "Biology"
+  },
+  {
+    "title": "Graphic Designer",
+    "description": "Join our mission to create meaningful impact through technology.",
+    "positions": 3,
+    "department": "Healthcare"
+  },
+  {
+    "title": "Teaching Assistant",
+    "description": "Exciting opportunity to work with a talented team on challenging projects.",
+    "positions": 1,
+    "department": "Data Science"
+  },
+  {
+    "title": "Security Engineer",
+    "description": "Be part of an innovative team working on exciting challenges.",
+    "positions": 2,
+    "department": "Education"
+  },
+  {
+    "title": "Backend Developer",
+    "description": "We're seeking a skilled professional to help shape our future.",
+    "positions": 4,
+    "department": "Mathematics"
+  },
+  {
+    "title": "Product Manager",
+    "description": "We're seeking a skilled professional to help shape our future.",
+    "positions": 3,
+    "department": "DevOps"
+  },
+  {
+    "title": "Network Engineer",
+    "description": "Be part of an innovative team working on exciting challenges.",
+    "positions": 5,
+    "department": "Human Resources"
+  },
+  {
+    "title": "Research Assistant",
+    "description": "Looking for an experienced professional to lead and innovate.",
+    "positions": 2,
+    "department": "Computer Science"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "description": "Join our dynamic team and work on cutting-edge technology solutions.",
+    "positions": 4,
+    "department": "Mathematics"
+  },
+  {
+    "title": "Teaching Assistant",
+    "description": "Looking for an experienced professional to lead and innovate.",
+    "positions": 3,
+    "department": "Data Science"
+  },
+  {
+    "title": "Operations Manager",
+    "description": "Opportunity to work on impactful projects with a collaborative team.",
+    "positions": 1,
+    "department": "Marketing"
+  },
+  {
+    "title": "Data Scientist",
+    "description": "Join our mission to create meaningful impact through technology.",
+    "positions": 2,
+    "department": "Human Resources"
+  },
+  {
+    "title": "Cloud Architect",
+    "description": "Exciting opportunity to work with a talented team on challenging projects.",
+    "positions": 1,
+    "department": "Research & Development"
+  },
+  {
+    "title": "Project Manager",
+    "description": "Join us in building the next generation of technology solutions.",
+    "positions": 5,
+    "department": "Biology"
+  }
+]

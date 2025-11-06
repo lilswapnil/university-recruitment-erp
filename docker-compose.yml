@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: erp_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=recruitment_erp
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    container_name: erp_backend
+    command: sh -c "python manage.py makemigrations api && python manage.py migrate && python manage.py createadmin && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/data
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=recruitment_erp
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: erp_frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - WDS_SOCKET_PORT=0 # Fix for a common React/Docker issue
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

@@ -1,0 +1,27 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-wheel-metadata/
+.coverage
+*.log
+db.sqlite3
+
+# Node / React
+node_modules/
+dist/
+build/
+.npm
+.yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env.local
+.DS_Store
+
+# Docker
+docker-compose-logs.txt
