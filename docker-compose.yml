@@ -14,7 +14,7 @@ services:
   backend:
     build: ./backend
     container_name: erp_backend
-    command: sh -c "python manage.py makemigrations api && python manage.py migrate && python manage.py createadmin && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py makemigrations api && python manage.py migrate && python manage.py createadmin && python manage.py createdemousers && python manage.py populatedb && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./backend:/app
       - ./data:/data
@@ -43,3 +43,5 @@ services:
 
 volumes:
   postgres_data:
+
+# Create media directory if it doesn't exist

@@ -18,6 +18,7 @@ function App() {
   const [activeView, setActiveView] = useState('dashboard');
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -115,13 +116,29 @@ function App() {
     }
   };
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Sidebar activeView={activeView} onViewChange={handleViewChange} userRole={user.role} />
-      <Header user={user} />
-      <main className="ml-16 mt-14 p-4">
+    <div className="workday-layout min-h-screen">
+      <Sidebar 
+        activeView={activeView} 
+        onViewChange={handleViewChange} 
+        userRole={user.role} 
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <Header user={user} onMenuToggle={toggleSidebar} />
+      <main className="workday-main">
         {renderContent()}
       </main>
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" 
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
     </div>
   );
 }
