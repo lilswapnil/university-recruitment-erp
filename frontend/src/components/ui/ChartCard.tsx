@@ -7,10 +7,11 @@ interface ChartData {
 }
 
 interface ChartCardProps {
+  title: string;
   data: ChartData[];
 }
 
-const ChartCard: React.FC<ChartCardProps> = ({ data }) => {
+const ChartCard: React.FC<ChartCardProps> = ({ title, data }) => {
   const maxValue = Math.max(...data.flatMap(d => [d.current, d.previous]));
   const chartHeight = 200;
   const chartWidth = 600;
@@ -39,6 +40,7 @@ const ChartCard: React.FC<ChartCardProps> = ({ data }) => {
 
   return (
     <div className="bg-white rounded-xl p-6 shadow-sm">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
       <div className="flex items-center gap-4 mb-6">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-purple-500"></div>

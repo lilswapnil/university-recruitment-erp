@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Mail, Phone, Plus, Loader2 } from 'lucide-react';
 import { Candidate, Job, Application } from '../types';
 import api from '../api';
-import Modal from './Modal';
+import Modal from './ui/Modal';
 
 interface Props {
   candidate: Candidate;

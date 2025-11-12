@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { Loader2, LogIn, UserPlus } from 'lucide-react';
 
 const LoginPage: React.FC = () => {

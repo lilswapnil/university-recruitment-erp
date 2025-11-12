@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from './contexts/AuthContext';
-import LoginPage from './components/LoginPage';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
+import LoginPage from './components/pages/LoginPage';
+import Sidebar from './components/common/Sidebar';
+import Header from './components/common/Header';
 import HRDashboard from './components/dashboards/HRDashboard';
 import ManagerDashboard from './components/dashboards/ManagerDashboard';
 import CandidateDashboard from './components/dashboards/CandidateDashboard';
@@ -10,6 +10,14 @@ import JobOpenings from './components/JobOpenings';
 import Candidates from './components/Candidates';
 import CandidateProfile from './components/CandidateProfile';
 import ApplicationsView from './components/ApplicationsView';
+import Analytics from './components/pages/Analytics';
+import Interviews from './components/pages/Interviews';
+import Reports from './components/pages/Reports';
+import Settings from './components/pages/Settings';
+import TeamAnalytics from './components/pages/TeamAnalytics';
+import MyTeam from './components/pages/MyTeam';
+import Profile from './components/pages/Profile';
+import JobSearch from './components/pages/JobSearch';
 import { Job, Candidate } from './types';
 import api from './api';
 
@@ -81,6 +89,8 @@ function App() {
     switch (activeView) {
       case 'dashboard':
         return renderDashboard();
+      
+      // Common pages
       case 'jobs':
         return (
           <div className="space-y-4">
@@ -88,9 +98,20 @@ function App() {
             <JobOpenings initialJobs={jobs} onJobsChange={setJobs} />
           </div>
         );
+      case 'applications':
+        return <ApplicationsView userRole={user.role} />;
+      case 'interviews':
+        return <Interviews />;
+      
+      // HR-specific pages
+      case 'analytics':
+        if (user.role !== 'HR') {
+          return <div className="text-center py-12 text-gray-600">Access denied. HR role required.</div>;
+        }
+        return <Analytics />;
       case 'candidates':
         if (user.role === 'CANDIDATE') {
-          return <div className="text-sm text-gray-600">You don't have access to this section.</div>;
+          return <div className="text-center py-12 text-gray-600">Access denied.</div>;
         }
         return (
           <div className="space-y-4">
@@ -98,9 +119,45 @@ function App() {
             <Candidates onSelectCandidate={handleSelectCandidate} />
           </div>
         );
+      case 'reporting':
+        if (user.role !== 'HR') {
+          return <div className="text-center py-12 text-gray-600">Access denied. HR role required.</div>;
+        }
+        return <Reports />;
+      case 'settings':
+        if (user.role !== 'HR') {
+          return <div className="text-center py-12 text-gray-600">Access denied. HR role required.</div>;
+        }
+        return <Settings />;
+      
+      // Manager-specific pages
+      case 'team-analytics':
+        if (user.role !== 'MANAGER') {
+          return <div className="text-center py-12 text-gray-600">Access denied. Manager role required.</div>;
+        }
+        return <TeamAnalytics />;
+      case 'team':
+        if (user.role !== 'MANAGER') {
+          return <div className="text-center py-12 text-gray-600">Access denied. Manager role required.</div>;
+        }
+        return <MyTeam />;
+      
+      // Candidate-specific pages
+      case 'profile':
+        if (user.role !== 'CANDIDATE') {
+          return <div className="text-center py-12 text-gray-600">Access denied. Candidate role required.</div>;
+        }
+        return <Profile />;
+      case 'job-search':
+        if (user.role !== 'CANDIDATE') {
+          return <div className="text-center py-12 text-gray-600">Access denied. Candidate role required.</div>;
+        }
+        return <JobSearch />;
+      
+      // Candidate profile view (for HR/Manager)
       case 'candidate-profile':
         if (user.role === 'CANDIDATE') {
-          return <div className="text-sm text-gray-600">You don't have access to this section.</div>;
+          return <div className="text-center py-12 text-gray-600">Access denied.</div>;
         }
         return (
           <CandidateProfile
@@ -109,8 +166,7 @@ function App() {
             onBack={handleBackToDashboard}
           />
         );
-      case 'applications':
-        return <ApplicationsView userRole={user.role} />;
+      
       default:
         return renderDashboard();
     }

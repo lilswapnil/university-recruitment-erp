@@ -10,7 +10,7 @@ import {
   Eye,
   Filter
 } from 'lucide-react';
-import DashboardCard from '../DashboardCard';
+import DashboardCard from '../ui/DashboardCard';
 import { Application } from '../../types';
 import api from '../../api';
 

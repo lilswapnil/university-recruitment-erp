@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
-import WelcomeCard from './WelcomeCard';
-import NewApplicationsCard from './NewApplicationsCard';
-import MetricCard from './MetricCard';
-import SummaryCard from './SummaryCard';
-import ChartCard from './ChartCard';
+import WelcomeCard from './ui/WelcomeCard';
+import NewApplicationsCard from './ui/NewApplicationsCard';
+import MetricCard from './ui/MetricCard';
+import SummaryCard from './ui/SummaryCard';
+import ChartCard from './ui/ChartCard';
 import { Application, Candidate } from '../types';
 import api from '../api';
 
@@ -97,7 +97,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onViewChange }) => {
           growthPercent={25}
           target={6000}
         />
-        <ChartCard data={filteredChartData} />
+        <ChartCard title="Application Trends" data={filteredChartData} />
       </div>
     </div>
   );

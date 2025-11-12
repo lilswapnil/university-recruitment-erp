@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { UserPlus, Loader2, Mail, Eye } from 'lucide-react';
 import { Candidate } from '../types';
 import api from '../api';
-import Modal from './Modal';
+import Modal from './ui/Modal';
 
 interface Props {
   onSelectCandidate: (candidate: Candidate) => void;

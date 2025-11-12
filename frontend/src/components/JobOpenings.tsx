@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Plus, Loader2, Building } from 'lucide-react';
 import { Job } from '../types';
 import api from '../api';
-import Modal from './Modal';
+import Modal from './ui/Modal';
 
 interface Props {
   initialJobs: Job[];

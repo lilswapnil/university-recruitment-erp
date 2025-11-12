@@ -6,6 +6,17 @@ export interface Job {
   description: string;
   positions: number;
   department: string;
+  location?: string;
+  status?: string;
+  // Extended properties for enhanced job search
+  company?: string;
+  salaryRange?: string;
+  jobType?: string;
+  experienceLevel?: string;
+  postedDate?: string;
+  applicants?: number;
+  benefits?: string[];
+  skills?: string[];
 }
 
 export interface Candidate {

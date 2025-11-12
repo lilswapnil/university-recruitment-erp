@@ -13,10 +13,10 @@ import {
   Eye,
   Calendar
 } from 'lucide-react';
-import DashboardCard from '../DashboardCard';
+import DashboardCard from '../ui/DashboardCard';
 import { Application, Job } from '../../types';
 import api from '../../api';
-import Modal from '../Modal';
+import Modal from '../ui/Modal';
 
 interface Candidate {
   id: number;
